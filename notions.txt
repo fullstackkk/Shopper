@@ -1,4 +1,38 @@
-1. display  строчный/блочный/строчно-блочный/
+VSCode:
+Установить плагины 
+  Auto Close Tag
+  Auto Complete Tag
+  Auto Rename Tag
+  Code Runner
+  CSS Peek
+  eCSStractor for VSCode
+  ES5 to ES6
+  HTML CSS Support
+  Iconify IntelliSense
+  Import Cost
+  JavaScript (ES6) code snippets
+  Prettier - Code formatter
+  Russian Language Pack for Visual Studio
+  vscode-icons
+Установить git
+
+Создать проект , загрузить его на github
+
+Блочная модель
+Специфичность
+Принцип каскада
+Наследование
+Контекст наложения 
+CSS-правило
+Комментарии в CSS 
+Подключение стилей
+display 
+
+
+
+
+
+
 
 1.Больше смысловые чем стилистические 
 <h1></h1>
@@ -124,7 +158,31 @@ sizes — атрибут, в котором указывается одно ил
   </select>
 </form>
 
+23. Списки 
+<ol>
+<ul>
+<li>
+<dl>, <dd>, <dt>
 
+24. таблицы
+<table></table>
+<tr></tr>
+<td></td>
+
+25. не малозначительные теги которые тоже нужны 
+<audio>
+<video>
+<iframe>
+<source>
+<canvas>
+
+
+ 
+
+
+https://githowto.com/ru - гайд по git (не путать с github)
+https://githowto.com/ru/setup - инструкция по установке и настройке git
+https://training.github.com/downloads/ru/github-git-cheat-sheet/ - шпаргалка по git 
 
 
 

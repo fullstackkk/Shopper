@@ -10,6 +10,10 @@
   font-family: "Montserrat", sans-serif;
   background-color: var(--primary-bg);
 }
+
+body {
+  width: 100%;
+}
 .header {
   min-height: 888px;
   margin-top: 56px;
@@ -38,6 +42,7 @@
   border: none;
   border-radius: 10px;
   padding: 0 18px 0 32px;
+
   background-color: #fff;
 }
 .basket {
@@ -65,11 +70,85 @@
 }
 
 .link {
-  color: #fff;
-  background-color: transparent;
-  text-decoration: none;
   margin-left: 75px;
+  display: inline;
+  background-color: transparent;
+}
+.link > a {
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
 }
 .link__first {
   margin-left: 460px;
+}
+/* About */
+.about {
+  margin-left: 85px;
+}
+
+.about__descr {
+  width: 600px;
+  /* не забыть убрать маржин */
+  margin-bottom: 100px;
+}
+.title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 78px;
+  color: #2b2626;
+  margin-top: 126px;
+}
+.about__descr_text {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 35px;
+  color: #2b2626;
+  margin-top: 30px;
+}
+.about__descr_btn {
+  width: 263px;
+  height: 70px;
+  background-color: #10b981;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 26px;
+  color: #fff;
+  margin-top: 52px;
+  cursor: pointer;
+  box-shadow: rgba(132, 94, 194, 0.15);
+}
+.icons {
+  position: relative;
+  margin-top: 112px;
+  display: inline-block;
+}
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.icon_2 {
+  position: absolute;
+  left: 37px;
+}
+.icon_3 {
+  position: absolute;
+  left: 74px;
+}
+.icon_4 {
+  position: absolute;
+  left: 112px;
+}
+.about__reviews_descr {
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: 500;
+  color: #2b2626;
+  display: inline-block;
+  margin-left: 126px;
+  width: 120px;
 }
