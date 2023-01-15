@@ -92,10 +92,8 @@ body {
 
 .about__descr {
   width: 600px;
-  /* не забыть убрать маржин */
-  margin-bottom: 100px;
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 .title {
   font-weight: 600;
@@ -150,6 +148,9 @@ body {
   position: absolute;
   left: 112px;
 }
+.about__reviews {
+  margin-bottom: 100px;
+}
 .about__reviews_descr {
   font-size: 26px;
   line-height: 35px;
@@ -160,21 +161,35 @@ body {
   width: 120px;
 }
 .about__interactive {
-  position: absolute;
+  border: 1px solid black;
+  width: 600px;
   display: inline-block;
-  top: 443px;
+  position: relative;
+  left: 114px;
+  top: -30px;
 }
 .play {
   width: 115px;
   display: inline-block;
+  position: relative;
+  left: -47px;
+  top: -8px;
 }
 .play__img {
+  display: block;
   width: 69px;
   height: 69px;
   border-radius: 100%;
-  display: block;
+  overflow: hidden;
   margin: 0 auto;
 }
+
+.play__img img {
+  width: 112px;
+  height: 75px;
+  margin: 0 0 0 -23px;
+}
+
 .play__text {
   color: var(--textprimarycolor);
   font-size: 21px;
@@ -182,7 +197,7 @@ body {
   font-weight: 500;
   border: none;
   display: block;
-  margin: 0 auto;
+  margin: 18px auto;
 }
 
 .about__interactive__title {
@@ -202,33 +217,108 @@ body {
   font-size: 40px;
   line-height: 49px;
   position: relative;
+  font-weight: 600;
+  /* left: -58px;
+  top: 110px; */
 }
 .title__word_R {
-  left: -29px;
-  top: 90px;
+  left: -59px;
+  top: 110px;
   transform: rotate(-93deg);
 }
 .title__word_e {
-  left: -52px;
-  top: 63px;
+  left: -90px;
+  top: 82px;
   transform: rotate(-93deg);
 }
+.title__word_d {
+  left: -116px;
+  top: 57px;
+  transform: rotate(-76deg);
+}
+.title__word_B {
+  left: -135px;
+  top: 20px;
+  transform: rotate(-61deg);
+}
+.title__word_e-e {
+  left: -152px;
+  top: -3px;
+  transform: rotate(-54deg);
+}
+.title__word_a {
+  left: -164px;
+  top: -22px;
+  transform: rotate(-45deg);
+}
+.title__word_t {
+  left: -172px;
+  top: -37px;
+  transform: rotate(-40deg);
+}
+.title__word_s {
+  left: -180px;
+  top: -46px;
+  transform: rotate(-36deg);
+}
+.title__word_M {
+  left: -176px;
+  top: -63px;
+  transform: rotate(-17deg);
+}
+.title__word_I {
+  left: -181px;
+  top: -69px;
+  transform: rotate(-8deg);
+}
+.title__word_9 {
+  left: -185px;
+  top: -69px;
+  transform: rotate(-8deg);
+}
+.title__word_c {
+  left: -189px;
+  top: -67px;
+  transform: rotate(-3deg);
+}
+.title__word_2 {
+  left: -192px;
+  top: -63px;
+  transform: rotate(18deg);
+}
+.title__word_z {
+  left: -196px;
+  top: -56px;
+  transform: rotate(25deg);
+}
+.title__word_m {
+  left: -204px;
+  top: -41px;
+  transform: rotate(33deg);
+}
+.title__word_sl {
+  left: -214px;
+  top: -23px;
+  transform: rotate(42deg);
+}
+.title__word_a-a {
+  left: -225px;
+  top: -8px;
+  transform: rotate(46deg);
+}
 .headphones__backgr {
-  position: absolute;
-  z-index: 1;
+  display: inline-block;
   background-color: #ecfef4;
   width: 272px;
   height: 477px;
   border-radius: 136px;
-  left: 141px;
-  top: 0;
 }
 .headphones {
   width: 332px;
-  position: relative;
-  z-index: 2;
+  position: absolute;
   display: inline-block;
   background-color: transparent;
+  left: 100px;
 }
 .headphones__img {
   height: 299px;
@@ -248,11 +338,11 @@ body {
 }
 .star__first {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -94px;
+  left: 51px;
 }
 .star__second {
   position: absolute;
-  top: 450px;
-  left: 450px;
+  top: 460px;
+  left: 429px;
 }
