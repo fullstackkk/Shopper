@@ -382,10 +382,10 @@ body {
 }
 /* products */
 .products {
-  height: 591px;
   background-color: var(--primary-products);
   padding-top: 73px;
   padding-left: 85px;
+  height: 591px;
 }
 .images {
   display: inline-block;
@@ -484,4 +484,95 @@ body {
   display: flex;
   gap: 93px;
   flex-wrap: wrap;
+}
+/* earphones */
+.earphones {
+  padding-top: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* launches */
+.launches {
+  padding-top: 130px;
+}
+.launches__title {
+  font-weight: 600;
+  line-height: 54px;
+  font-size: 44px;
+  text-align: center;
+  color: var(--textprimarycolor);
+}
+.launches__title-margin-bt {
+  margin-bottom: 120px;
+}
+.launches__wrapper {
+  height: 591px;
+  padding: 62px 85px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.bg-primary-products {
+  background-color: var(--primary-products);
+}
+.launches-descr {
+  display: inline-flex;
+  flex-direction: column;
+}
+.launches__images {
+  display: flex;
+  gap: 45px;
+}
+.launches__images > img {
+  width: 237px;
+  height: 417px;
+}
+.launches__images > .down {
+  margin-top: 50px;
+}
+.launches-descr-normal {
+  position: relative;
+  top: 11px;
+  width: 584px;
+}
+.launches-descr__title {
+  font-size: 44px;
+  line-height: 54px;
+  color: #fff;
+  font-weight: 600;
+}
+.launches-descr__description {
+  margin-top: 29px;
+  font-size: 21px;
+  line-height: 35px;
+  color: #fff;
+  font-weight: 500;
+}
+.price_launchess {
+  margin-top: 26px;
+}
+.launches__colors {
+  margin-top: 50px;
+  display: flex;
+  gap: 31px;
+}
+.color {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+}
+.color.black {
+  background-color: #111111;
+}
+.color.yellow {
+  background-color: #fff500;
+}
+.color.blue {
+  background-color: #4484ff;
+}
+.launches__button-container {
+  display: flex;
+  margin-top: 50px;
+  gap: 77px;
 }
