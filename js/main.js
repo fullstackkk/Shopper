@@ -1,7 +1,6 @@
 const mobileMenu = document.querySelector('.mobile-menu')
 const header = document.querySelector('.header')
-
-debugger
+ 
 
 const links = {
     products:document.querySelector('#products'),

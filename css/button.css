@@ -31,13 +31,26 @@
 .button-oval {
   width: 177px;
   height: 91px;
-  border-radius: 50%;
-  background-color: var(--primary);
-  color: #fff;
+  
+  background-color: transparent;
+   
+  color:black;
   font-size: 26px;
   line-height: 32px;
   font-weight: 600;
   border: none;
+  transition: all 0.5 ease-out;
+  cursor: pointer;
+}
+.button-oval:hover{
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 50%; 
+}
+.button-oval.active{
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 50%; 
 }
 @media (max-width: 568px) {
   .button-oval {
