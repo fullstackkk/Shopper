@@ -19,6 +19,44 @@ body {
   width: 100%;
   background-color: var(--primary-bg); }
 
+
+.mobile-menu{
+  background-color: var(--primary-bg); 
+  height: 100vh;
+  width: 100%;
+  display: none;
+  justify-content: start;
+  align-items: center;
+  gap: 200px;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding-top: 160px;
+  transition: all 0.5s ease-out ;
+}
+.mobile-menu__close{
+  position: absolute;
+  cursor:pointer;
+  right: 70px;
+  top: 50px;
+  border:none;
+  background: none;
+  color: var(--primary);
+  font-size: 50px;
+}
+.mobile-menu__links{
+  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  font-size: 40px;
+  list-style: none;
+}
+ 
 .header {
   min-height: 888px;
   margin-top: 56px; }
@@ -44,7 +82,19 @@ body {
 
 .logo__title > span {
   color: black; }
-
+.menu_button{
+  width: 30px;
+  height: 30px;
+  background:none;
+  border:none;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+  color:black;
+  display: none;
+}
+.black{
+  color:black;
+}
 .search__input__label {
   position: relative; }
 
@@ -663,8 +713,27 @@ body {
     gap: 40px; }
 
 @media (max-width: 1140px) {
+  .navbar_header>.links{
+    display: none;
+  }
+  .menu_button{
+    display: block;
+  }
+  .mobile-menu{
+    display: flex;
+  }
+  .login{
+    display: none;
+  }
+  .basket{
+    display: none;
+  }
+  .controls>.search__input__label{
+    display: none;
+  }
   .search__input {
-    width: 218px; }
+    width: 218px; 
+  }
 
   .about__descr {
     width: 810px; }
@@ -685,6 +754,10 @@ body {
   .about__interactive {
     margin-top: 127px; } }
 @media (max-width: 968px) {
+
+  .controls>.search__input__label{
+    display: none;
+  }
   .about {
     margin-left: 45px; }
 
@@ -750,8 +823,10 @@ body {
     width: 100%; } }
 @media (max-width: 568px) {
   .controls {
-    flex-direction: column;
-    padding: 0 30px; }
+     
+    padding: 0 30px; 
+    align-items: center;
+  }
 
   .search__input {
     width: 100%; }
@@ -805,3 +880,13 @@ body {
     gap: 25px; } }
 
 /*# sourceMappingURL=main.css.map */
+
+.hidden{
+  /* display: none; */
+  transform: translateX(100%);
+}
+.visible{
+  /* display: flex; */
+  transform: translateX(0);
+}
+ 
