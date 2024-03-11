@@ -1,6 +1,6 @@
-@import url(./fonts.css);
-@import url(./button.css);
-@import url(./card.css);
+@import './_fonts.scss';
+@import './_button.scss';
+@import './_card.scss';
 :root {
   --primary: #10b981;
   --primary-hover: #0d89be;
