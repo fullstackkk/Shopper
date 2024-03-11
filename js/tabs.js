@@ -45,8 +45,9 @@ const earphonesTabCardWrapper =  document.querySelector('.earphones').querySelec
 const sellersTabBtnWrapper =document.querySelector('.sellers').querySelector('.tab__btn-wrapper')
 
 
-function getCards(cardInfoList , elem){
-    const arr =  cardInfoList.forEach(cardInfo => {
+function getCards(cardInfoList , elem, remove = false){
+     
+    const arr = cardInfoList.map(cardInfo => {
         const tab = `<div class="tab__card card">
                 <div class="card__product">
                     <img class="card__img" src="./img/card__headphons.png" alt="card__headphons">
@@ -69,29 +70,35 @@ function getCards(cardInfoList , elem){
                     <p>Save 60%</p>
                 </div>
             </div>`
-            elem.insertAdjacentHTML("beforeend",tab)
+         return tab
+            // elem.insertAdjacentHTML("beforeend",tab)
     })
-     console.log("tab")
+    // if(remove){
+    //     elem.remove("beforeend",arr.join())
+    //     return
+    // }
+    elem.insertAdjacentHTML("beforeend",arr.join(' '))
 }
 
 
 sellersTabBtnWrapper.addEventListener("click",(event)=>{
     const target = event.target
+    const emptyWrapper = document.createElement('div')
+    emptyWrapper.classList.add('tab__card-wrapper')
+    
 
-    console.log(target.innerText == "Top Picks")
     const ovalButtons = sellersTabBtnWrapper.querySelectorAll('button')
     ovalButtons.forEach(btn =>{
         btn.classList.remove('active')
 
     })
     target.classList.add('active')
-    // sellersTabCardWrapper.replaceWith('')
-    if(target.innerText == "Top Picks"){
-        
-        getCards(cardInfoTopPicksList,sellersTabCardWrapper)
-    }else{
-         
-        getCards(cardInfoWatchesList,sellersTabCardWrapper)
+    if(target.innerText == "Top Picks"){  
+        // sellersTabCardWrapper.replaceWith(emptyWrapper)
+        getCards(cardInfoTopPicksList,sellersTabCardWrapper,true)
+    }else{ 
+        // sellersTabCardWrapper.replaceWith(emptyWrapper) 
+        getCards(cardInfoWatchesList,sellersTabCardWrapper,false)
     }
     
 })

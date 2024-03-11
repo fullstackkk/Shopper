@@ -56,7 +56,38 @@ body {
   font-size: 40px;
   list-style: none;
 }
- 
+.welcome-popup{
+  background-color: rgba(132, 94, 194, 0.15);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__wrapper{
+    background-color: #fff;
+    border-radius:10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  &__button{
+    width: fit-content;
+    padding: 0 10px;
+  }
+  p{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 35px;
+    color: var(--textprimarycolor);
+  }
+}
 .header {
   min-height: 888px;
   margin-top: 56px; }
