@@ -1,3 +1,5 @@
+import getCards from './getCards.js'
+
 const cardInfoTopPicksList = [{
     cardTitle: "Безпроводные наушники №1",
     reviews:100,
@@ -25,19 +27,6 @@ const cardInfoWatchesList = [{
     price:123,
 }]
 
-// "beforebegin" – вставить html непосредственно перед elem,
-// "afterbegin" – вставить html в начало elem,
-// "beforeend" – вставить html в конец elem,
-// "afterend" – вставить html непосредственно после elem.
-// mobilemenu.insertAdjacentHTML('afterbegin', input)
-// mobilemenu.remove('afterbegin', input)
-
-
-// mobilemenu.append(div)
-// mobilemenu.prepend(div)
-// mobilemenu.before(div)
-// mobilemenu.after(div) 
-// mobilemenu.replaceWith(div) 
 
 const sellersTabCardWrapper =  document.querySelector('.sellers').querySelector('.tab__card-wrapper')
 const earphonesTabCardWrapper =  document.querySelector('.earphones').querySelector('.tab__card-wrapper')
@@ -45,8 +34,8 @@ const earphonesTabCardWrapper =  document.querySelector('.earphones').querySelec
 const sellersTabBtnWrapper =document.querySelector('.sellers').querySelector('.tab__btn-wrapper')
 
 
-function getCards(cardInfoList , elem, remove = false){
-     
+function getCards(cardInfoList , elem){
+    elem.innerHTML=''
     const arr = cardInfoList.map(cardInfo => {
         const tab = `<div class="tab__card card">
                 <div class="card__product">
@@ -71,12 +60,8 @@ function getCards(cardInfoList , elem, remove = false){
                 </div>
             </div>`
          return tab
-            // elem.insertAdjacentHTML("beforeend",tab)
     })
-    // if(remove){
-    //     elem.remove("beforeend",arr.join())
-    //     return
-    // }
+    
     elem.insertAdjacentHTML("beforeend",arr.join(' '))
 }
 
@@ -94,20 +79,14 @@ sellersTabBtnWrapper.addEventListener("click",(event)=>{
     })
     target.classList.add('active')
     if(target.innerText == "Top Picks"){  
-        // sellersTabCardWrapper.replaceWith(emptyWrapper)
-        getCards(cardInfoTopPicksList,sellersTabCardWrapper,true)
+        getCards(cardInfoTopPicksList,sellersTabCardWrapper)
     }else{ 
-        // sellersTabCardWrapper.replaceWith(emptyWrapper) 
         getCards(cardInfoWatchesList,sellersTabCardWrapper,false)
     }
     
 })
 
-
-
-
 getCards(cardInfoTopPicksList,sellersTabCardWrapper)
-// getCards(cardInfoList,earphonesTabCardWrapper)
 
 
 

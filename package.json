@@ -1,0 +1,25 @@
+{
+  "name": "shopper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "webpack --env mode=development",
+    "build:prod": "webpack --env mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstackkk/Shopper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullstackkk/Shopper/issues"
+  },
+  "homepage": "https://github.com/fullstackkk/Shopper#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}

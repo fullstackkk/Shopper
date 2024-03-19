@@ -1,3 +1,5 @@
+// const getCards = require('./js/getCards.js')
+
 const mobileMenu = document.querySelector('.mobile-menu')
 const header = document.querySelector('.header')
  
@@ -43,3 +45,5 @@ function scrollToSection(event){
 
 mobileMenu.addEventListener('click',scrollToSection)
 header.addEventListener('click',scrollToSection)
+
+console.log('Webpack work')
