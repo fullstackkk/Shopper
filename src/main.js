@@ -1,49 +1,84 @@
-// const getCards = require('./js/getCards.js')
+import scss from './scss/main.scss'
+import createMobileMenu from './js/mobile-menu.js'
+import createWelcomePopup from './js/welcome-popup.js'
+import tabs from './js/tabs.js'
+import {cardInfoTopPicksList,cardInfoWatchesList} from './js/data/tabs-card.js'
 
-const mobileMenu = document.querySelector('.mobile-menu')
-const header = document.querySelector('.header')
+
+
+createMobileMenu()
+createWelcomePopup()
+
+const tabSellersNames = ['Top Picks','Watches']
+const tabEarphonesNames = ['Earbuds','Wireless','Wired']
+tabs(tabSellersNames,[cardInfoTopPicksList,cardInfoWatchesList],'.sellers')
+tabs(tabEarphonesNames,[cardInfoTopPicksList,cardInfoWatchesList,cardInfoTopPicksList],'.earphones')
+
  
 
-const links = {
-    products:document.querySelector('#products'),
-    sellers:document.querySelector('#sellers'),
-    earphones: document.querySelector('#earphones'),
-    launches: document.querySelector('#launches'),
-}
+// const user1 ={
+//     name:"Albert",
+//     hasJob:true,
+//     checkHasJob (){
+//         console.log(this.name)
+//     },
+//     children:{
+//         name:"Oleg",
+//         age:'1',
+//         sayName(){
+//             let sayAge = ()=>{
+//                 console.log(this.age)
+//             }
+//             sayAge()
+//             console.log(this.name)
+//         }
+//     }
+// }
 
-document.querySelector('.menu_button').addEventListener('click',(event)=>{
-    mobileMenu.classList.remove('hidden')
-    mobileMenu.classList.add('visible')
-})
+// user1.children.sayName()
 
-mobileMenu.querySelector('.mobile-menu__close')
-    .addEventListener('click',(event)=>{
-        mobileMenu.classList.remove('visible')
-        mobileMenu.classList.add('hidden')
-        
-})
 
-function scrollToSection(event){
-    const classes = event.target.className
-    // console.log(classes.includes('menu-link'))
-    if(classes.includes('menu-link')){
-        const content = event.target.innerText
-        switch(content){
-            case 'Features':
-                console.log("Features")
-                links.products.scrollIntoView()
-            case 'Sellers':
-                links.sellers.scrollIntoView()
-            case 'Earphones':
-                links.earphones.scrollIntoView()
-            case 'Launches':
-                links.launches.scrollIntoView()
-        }   
+function User(name = ''){
+    this.name = name;
+    this.hasJob = false;
+    this.hasChildren = false;
+    this.age = 0
+    this.checkHasJob = function(){
+        if(this.hasJob){
+            console.log(`У ${this.name} есть работа`)
+        }else{
+            console.log(`У ${this.name} нет работы`)
+        };
+    }
+    this.setHasJob= function(bool){
+        // 
+        // 
+        //
+        this.hasJob = bool
+    }
+    this.setAge = function(num){
+        if(num > 0 && num < 99){
+            this.age= num
+        }else{
+            throw new Error('Возраст не может быть меньше "0" и больше "99" лет')
+        }
+    }
+    this.checkAge = function(){
+        console.log(this.age)
     }
 }
 
+const user = new User("Albert")
+const user2 = new User('Anna')
+const user3 = new User('Anna')
+const user4 = new User('Anna')
+const user5 = new User('Anna')
+const user6 = new User('Anna')
+const user7 = new User('Anna')
 
-mobileMenu.addEventListener('click',scrollToSection)
-header.addEventListener('click',scrollToSection)
+user2.checkHasJob()
+user2.setHasJob(true)
+user2.checkHasJob()
+user.setAge(9)
+user.checkAge()
 
-console.log('Webpack work')

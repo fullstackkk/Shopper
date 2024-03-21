@@ -1,5 +1,5 @@
-function getCards(cardInfoList , elem){
-    console.log('getCards')
+export default function getCards(cardInfoList , elem){
+     
     elem.innerHTML=''
     const arr = cardInfoList.map(cardInfo => {
         const tab = `<div class="tab__card card">
