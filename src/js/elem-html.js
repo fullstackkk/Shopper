@@ -1,5 +1,8 @@
 export default class ElemHTML {
-    elem = document.createElement('div')
+     
+    constructor(tag = 'div'){
+        this.elem = document.createElement(tag)
+    }
     
     setClasses(className = '') {
         this.elem.classList.add(className)
@@ -13,7 +16,6 @@ export default class ElemHTML {
             return
         }
         document.querySelector(containter).append(this.elem)
-        console.log('render')
     }
     addInnerHTML(content) {
         if (!content) {

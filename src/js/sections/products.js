@@ -1,8 +1,11 @@
 import ElemHTML from "../elem-html.js";
+import headphones__1 from '../../img/headphones__1.png'
+import headphones__2 from '../../img/headphones__2.png'
+import headphones__3 from '../../img/headphones__3.png'
 
 
 class ProductsBlock extends ElemHTML{
-    elem = document.createElement('section')
+    
 
     constructor(classes = ''){
         super()
@@ -15,9 +18,9 @@ class ProductsBlock extends ElemHTML{
         <div class="images ">
             <h2 class="images__title">Apple wireless Airpod</h2>
             <div class="images__container images__container_products">
-                <img class="images__container_1" src="../src/img/headphones__1.png" alt="headphones">
-                <img class="images__container_2" src="../src/img/headphones__2.png" alt="headphones">
-                <img class="images__container_3" src="../src/img/headphones__3.png" alt="headphones">
+                <img class="images__container_1" src="${headphones__1}" alt="headphones">
+                <img class="images__container_2" src="${headphones__2}" alt="headphones">
+                <img class="images__container_3" src="${headphones__3}" alt="headphones">
             </div>
             <div class="price price_products">
                 <p class="price__text">Price :</dp>

@@ -2,9 +2,16 @@ import ElemHTML from "../elem-html.js";
 import search from '../../img/search.svg'
 import human from '../../img/human.svg'
 import basket from '../../img/basket.svg'
+import avatar__1 from '../../img/avatar__1.png'
+import avatar__2 from '../../img/avatar__2.png'
+import avatar__3 from '../../img/avatar__3.png'
+import avatar__4 from '../../img/avatar__4.png'
+import play from '../../img/play.png'
+import headphones from '../../img/headphones.png'
+import star from '../../img/star.svg'
 
 class Header extends ElemHTML{
-    elem = document.createElement('section')
+    
 
     constructor(classes = ''){
         super()
@@ -53,10 +60,10 @@ class Header extends ElemHTML{
                         <button class="about__descr_btn">Buy Now</button>
                         <div class="about__reviews">
                             <div class="icons">
-                                <!-- <img class="icon icon_1" src="../src/img/avatar__1.png" alt="avatar"> -->
-                                <img class="icon icon_2" src="../src/img/avatar__2.png" alt="avatar">
-                                <img class="icon icon_3" src="../src/img/avatar__3.png" alt="avatar">
-                                <img class="icon icon_4" src="../src/img/avatar__4.png" alt="avatar">
+                                <img class="icon icon_1" src="${avatar__1}" alt="avatar">
+                                <img class="icon icon_2" src="${avatar__2}" alt="avatar">
+                                <img class="icon icon_3" src="${avatar__3}" alt="avatar">
+                                <img class="icon icon_4" src="${avatar__4}" alt="avatar">
                             </div>
                             <p class="about__reviews_descr">15k Well Reviews</p>
                         </div>
@@ -66,7 +73,7 @@ class Header extends ElemHTML{
                 <div class="about__interactive">
                     <div class="play">
                         <div class="play__img">
-                            <img src="../src/img/play.png" alt="play" />
+                            <img src="${play}" alt="play" />
                         </div>
                         <div class="play__img-round"></div>
                         <button class="play__text">Play Video</button>
@@ -89,10 +96,10 @@ class Header extends ElemHTML{
                         <p class="title__word title__word_m">m</p>
                         <p class="title__word title__word_sl">/</p>
                         <p class="title__word title__word_a-a">a</p>
-                        <img class="headphones__img" src="../src/img/headphones.png" alt="headphones">
+                        <img class="headphones__img" src="${headphones}" alt="headphones">
                         <p class="headphones__text">$50</p>
-                        <img class="star star__first" src="../src/img/star.svg" alt="star">
-                        <img class="star star__second" src="../src/img/star.svg" alt="star">
+                        <img class="star star__first" src="${star}" alt="star">
+                        <img class="star star__second" src="${star}" alt="star">
                     </div>
 
                 </div>
