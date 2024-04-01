@@ -1,8 +1,8 @@
-export default async function getHeadphones(){
+export default async function getCart(){
     let data = []
 
     try{
-        let response = await fetch('http://localhost:8000/headphones/get-list')
+        let response = await fetch('http://localhost:8000/cart/get')
         if(response.ok){
             console.log(`Загружено c статусом ${response.status}`)
             data = await response.json()

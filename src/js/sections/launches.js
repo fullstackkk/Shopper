@@ -1,7 +1,7 @@
 import ElemHTML from "../elem-html.js";
 import headphones__1 from '../../img/headphones__1.png'
 import headphones__2 from '../../img/headphones__2.png'
-
+import addToCart from '../service/add-to-cart.js'
 class LaunchesBlock extends ElemHTML{
     
 
@@ -44,6 +44,11 @@ class LaunchesBlock extends ElemHTML{
     }
     createLaunchesBlock(){
         this.render()
+        const buyBtn = document.querySelector('.launches__wrapper').querySelector('.button-card')
+        buyBtn.addEventListener('click',()=>{
+            console.log('Add to cart')
+            addToCart()
+        })
     }
 }
  

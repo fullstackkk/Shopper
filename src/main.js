@@ -12,34 +12,44 @@ import Footer from './js/sections/footer.js'
 
 const header = new Header('header')
 const productsBlock = new ProductsBlock('products')
-const sellersBlock =new SellersBlock('sellers')
+const sellersBlock = new SellersBlock('sellers')
 const earphonesBlock = new EarphonesBlock('earphones')
 const launchesBlock = new LaunchesBlock('launches')
 const footer = new Footer('footer')
 const mobileMenu = new MobileMenu('mobile-menu hidden')
 
-header.setTemplate()
-header.createHeader()
-productsBlock.setTemplate()
-productsBlock.createProductsBlock()
-sellersBlock.setTemplate()
-sellersBlock.createSellersBlock()
-earphonesBlock.setTemplate()
-earphonesBlock.createEarphonesBlock()
-launchesBlock.setTemplate()
-launchesBlock.createLaunchesBlock()
-footer.setTemplate()
-footer.createFooter()
-mobileMenu.setTemplate()
-mobileMenu.createMobileMenu()
+new Promise((res) => {
+    header.setTemplate()
+    header.createHeader()
+    res()
+}).then(() => {
+    productsBlock.setTemplate()
+    productsBlock.createProductsBlock()
+}).then(async () => {
+    sellersBlock.setTemplate()
+    await sellersBlock.createSellersBlock()
+    const tabSellersNames = ['Top Picks', 'Watches']
+    tabs(tabSellersNames, [cardInfoTopPicksList, cardInfoWatchesList], '.sellers')
+}).then(async () => {
+    earphonesBlock.setTemplate()
+    await earphonesBlock.createEarphonesBlock()
+    const tabEarphonesNames = ['Earbuds', 'Wireless', 'Wired']
+    tabs(tabEarphonesNames, [cardInfoTopPicksList, cardInfoWatchesList, cardInfoTopPicksList], '.earphones')
+}).then(() => {
+    launchesBlock.setTemplate()
+    launchesBlock.createLaunchesBlock()
+}).then(() => {
+    footer.setTemplate()
+    footer.createFooter()
+}).then(() => {
+    mobileMenu.setTemplate()
+    mobileMenu.createMobileMenu()
+}).then(() => {
+    createWelcomePopup()
+})
 
 
-createWelcomePopup()
 
-// const tabSellersNames = ['Top Picks', 'Watches']
-// const tabEarphonesNames = ['Earbuds', 'Wireless', 'Wired']
-// tabs(tabSellersNames, [cardInfoTopPicksList, cardInfoWatchesList], '.sellers')
-// tabs(tabEarphonesNames, [cardInfoTopPicksList, cardInfoWatchesList, cardInfoTopPicksList], '.earphones')
 
 
 
