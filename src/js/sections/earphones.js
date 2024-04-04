@@ -4,13 +4,19 @@ import card__headphons__4 from '../../img/card__headphons__4.png'
 import card__headphons__2 from '../../img/card__headphons__2.png'
 import card__headphons__5 from '../../img/card__headphons__5.png'
 import getHeadphones from './../service/get-headphones.js'
+import tabs from '../tabs.js'
+import { cardInfoTopPicksList, cardInfoWatchesList } from '../data/tabs-card.js'
 
+const tabEarphonesNames = ['Earbuds', 'Wireless', 'Wired']
 class EarphonesBlock extends ElemHTML{
     
 
     constructor(classes = ''){
         super('section')
         this.classes = classes
+        this.headphonesEarbudsList = []
+        this.headphonesWirelessList = []
+        this.headphonesWiredList = []
     }
     setTemplate(){
         this.elem.classList.add(this.classes)
@@ -46,7 +52,7 @@ class EarphonesBlock extends ElemHTML{
                     <div class="card__discount">
                         <p>Save 60%</p>
                     </div>
-                </div> 
+            </div> 
                 
                   <div class="tab__card card">
                     <div class="card__product card__product_blue">
@@ -98,9 +104,10 @@ class EarphonesBlock extends ElemHTML{
      `)
     }
     async createEarphonesBlock(){
-        const res = await getHeadphones()
-        console.log(res)
+        this.headphonesWirelessList = await getHeadphones()
+        console.log(this.headphonesWirelessList)
         this.render()
+        tabs(tabEarphonesNames, [this.headphonesWirelessList, cardInfoWatchesList, cardInfoTopPicksList], '.earphones') 
     }
 }
  

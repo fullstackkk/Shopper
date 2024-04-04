@@ -1,8 +1,6 @@
 import scss from './scss/main.scss'
 import MobileMenu from './js/sections/mobile-menu.js'
 import createWelcomePopup from './js/welcome-popup.js'
-import tabs from './js/tabs.js'
-import { cardInfoTopPicksList, cardInfoWatchesList } from './js/data/tabs-card.js'
 import Header from './js/sections/header.js'
 import ProductsBlock from './js/sections/products.js'
 import SellersBlock from './js/sections/sellers.js'
@@ -28,13 +26,9 @@ new Promise((res) => {
 }).then(async () => {
     sellersBlock.setTemplate()
     await sellersBlock.createSellersBlock()
-    const tabSellersNames = ['Top Picks', 'Watches']
-    tabs(tabSellersNames, [cardInfoTopPicksList, cardInfoWatchesList], '.sellers')
 }).then(async () => {
     earphonesBlock.setTemplate()
-    await earphonesBlock.createEarphonesBlock()
-    const tabEarphonesNames = ['Earbuds', 'Wireless', 'Wired']
-    tabs(tabEarphonesNames, [cardInfoTopPicksList, cardInfoWatchesList, cardInfoTopPicksList], '.earphones')
+    await earphonesBlock.createEarphonesBlock() 
 }).then(() => {
     launchesBlock.setTemplate()
     launchesBlock.createLaunchesBlock()

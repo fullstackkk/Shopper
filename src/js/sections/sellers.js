@@ -3,17 +3,25 @@ import redStar from '../../img/red__star.svg'
 import card__headphons from '../../img/card__headphons.png'
 import card__headphons__2 from '../../img/card__headphons__2.png'
 import card__headphons__3 from '../../img/card__headphons__3.png'
+import getSellers from '../service/get-sellers.js'
+import tabs from '../tabs.js'
+import { cardInfoWatchesList } from '../data/tabs-card.js'
+
+const tabSellersNames = ['Top Picks', 'Watches']
 class SellersBlock extends ElemHTML{
     
 
     constructor(classes = ''){
-        super()
+        super('section')
         this.classes = classes
+        this.topPicks = []
+        this.topWatches = []
     }
 
     setTemplate(){
         this.elem.classList.add(this.classes)
-        this.elem.insertAdjacentHTML("afterbegin",`  <section class="sellers" id="sellers">
+        this.elem.insertAdjacentHTML("afterbegin",` 
+        
         <h2 class="sellers__title sellers__title-margin-bt">Top Sellers</h2>
         <div class="tab container">
             <div class="tab__btn-wrapper">
@@ -91,11 +99,14 @@ class SellersBlock extends ElemHTML{
                 </div>  
             </div>
         </div>
-    </section>
+    
      `)
     }
-    createSellersBlock(){
+    async createSellersBlock(){
+        this.topPicks = await getSellers()
+        console.log(this.topPicks)
         this.render()
+        tabs(tabSellersNames, [this.topPicks, cardInfoWatchesList], '.sellers')
     }
 }
  

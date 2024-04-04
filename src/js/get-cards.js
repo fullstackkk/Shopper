@@ -5,7 +5,7 @@ export default function getCards(cardInfoList , elem){
     elem.innerHTML=''
     const arr = cardInfoList.map(cardInfo => {
         const tab = `<div class="tab__card card">
-                <div class="card__product">
+                <div class="card__product ${cardInfo.color}">
                     <img class="card__img" src="${card__headphons}" alt="card__headphons">
                     <div class="card__descr">
                         <h4 class="card__text">${cardInfo.cardTitle}</h4>
